@@ -1,4 +1,4 @@
-class BaseClass{
+class Baseclass{
     constructor(x, y, width, height, angle) {
         var options = {
             'restitution':0.8,
