@@ -3,7 +3,7 @@ const World= Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
-var ground,stand,block1;
+var ground,stand,block1, polygon;
 
 function preload(){
 
@@ -34,6 +34,10 @@ block12= new Block(550,390,30,40)
 block13 = new Block(460,340,30,40);
 block14 = new Block(490,360,30,40);
 block15 = new Block(520,340,30,40);
+polygon= new Polygon(30,50,400);
+
+block16 = new Block(490,100,30,40);
+Slingshot = new SlingShot(polygon.body,{x:80, y:350});
 
 Engine.run(engine);
 
@@ -60,5 +64,9 @@ function draw(){
    block12.display();
    block13.display();
    block14.display();
-  
+   block15.display();
+   Slingshot.display();
+  polygon.display();
+   block16.display();
+   
 }
